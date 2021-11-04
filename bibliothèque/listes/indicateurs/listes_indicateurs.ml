@@ -14,7 +14,7 @@ let rec somme_l l1 = match l1 with
     | [] -> 0
     | e::q -> e + somme_l q;;
 
-(* [appartient_l e l1] renvoie si e appartient a l1*)     
+(* [appartient_l e l1] rindique si e appartient a l1*)     
 let rec appartient_l e l1 = match l1 with
     |[] -> false
     |e1::q -> e1 = e || appartient_l e q;;
@@ -33,13 +33,13 @@ let rec maxi_l l1 = match l1 with
             if e > m then e
             else m;;
 
-(* [croissant_l l1] renvoie si l1 est triée dans l'ordre croissant *)
+(* [croissant_l l1] indique si l1 est triée dans l'ordre croissant *)
 let rec croissant_l l1 = match l1 with
     |[] -> true
     |[e] -> true
     |e::e1::q -> e>e1 || croissant_l (e1::q);;
 
-(* [decroissant_l l1] renvoie si l1 est triée dans l'ordre decroissant  *)
+(* [decroissant_l l1] indique si l1 est triée dans l'ordre decroissant  *)
 let rec decroissant_l l1 = match l1 with
     |[] -> true
     |[e] -> true
