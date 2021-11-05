@@ -1,3 +1,8 @@
+(* [inverser_l] renvoie l'inversion de la liste l1*)
+let rec inverser_l acc l1 = match l1 with 
+| [] -> acc
+| e::q -> inverser_l (e::acc) q;;
+
 (* [concat_l l1 l2] renvoie la concatenation de l1 et l2 *)
 let rec concat_l l1 l2 = match l1 with
     |[] -> l2
