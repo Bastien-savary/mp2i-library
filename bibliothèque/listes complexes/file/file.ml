@@ -1,5 +1,5 @@
 (*type d'une file*)
-type 'a file = {tab: 'array; mutable deb : int; mutable fin: int; mutable vide : bool}
+type 'a file = {tab: 'a array; mutable deb : int; mutable fin: int; mutable vide : bool}
 
 (*[ajoute f e] ajoute l'élément e à la fin de la file d'attente f*)
 let ajoute f e = 
