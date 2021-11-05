@@ -26,7 +26,7 @@ let rec mini_l l1 = match l1 with
             if e < m then e
             else m;;
 
-(** [maxi_l l1] renvoie le maximum de l1*)            
+(* [maxi_l l1] renvoie le maximum de l1*)            
 let rec maxi_l l1 = match l1 with
     |[] -> min_int
     |e::q -> let m = maxi_l q in
