@@ -6,6 +6,7 @@ let create e =
       let rec l = {elem = e; prev = l; next = l} in l;;
       
 (*[length l] renvoie la longueur de la liste l2c*)
+let length l =
 let rec aux l1 =
   if l1 == l then 1 else 1 + aux l1.next in 
   aux l.next;;
