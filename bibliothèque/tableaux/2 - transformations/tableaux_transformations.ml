@@ -5,7 +5,7 @@ let swap_t t1 i j =
   t1.(j) <- tmp;;
 
 (* [inverser_t t1] renvoie l'inversion du tableaux t1*)
-let reverse_t t1 =
+let inverser_t t1 =
     let n = ((Array.length t1)-1) in 
     for i = 0 to n/2 do
         let c = ref t1.(i) in 
@@ -15,8 +15,8 @@ let reverse_t t1 =
     done;
     t1;;
 
-(* [Image_t f t1] renvoie le tableau contenant les images de chaque élément de t1 par f *)           
-let map_t f t1 =
+(* [image_t f t1] renvoie le tableau contenant les images de chaque élément de t1 par f *)           
+let image_t f t1 =
     for i = 0 to ((Array.length t1)-1) do
         t1.(i) <- f(t1.(i))
     done;
