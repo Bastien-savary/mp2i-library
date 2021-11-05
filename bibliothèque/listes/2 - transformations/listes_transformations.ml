@@ -51,7 +51,7 @@ let rec partition_l l1 pivot = match l1 with
 let rec quicksort_l l1 = match l1 with
     |[]->[]
     |p::q -> let l2, l3 = partition_l q p in
-         append_l (quicksort_l l2) (p::quicksort_l l3)
+         appartient_l (quicksort_l l2) (p::quicksort_l l3);;
 
 (* [ajoute_l e ll] insère l'élément e dans chaque liste contenue dans ll *)
 let rec ajoute_l e ll = match ll with
