@@ -22,6 +22,14 @@ let map_t f t1 =
     done;
     t1;;
 
+(** [sort_bubble t] trie le tableau en compléxité (O(n**2)) *)
+let sort_bubble t = 
+  for _ = 0 to Array.length t - 1 do
+    for j = 0 to Array.length t - 2 do
+      if t.(j) > t.(j + 1) then swap t j (j + 1)
+      done
+  done;;
+  
 (* [tri_comptage_t  t1] trie le tableau t1*)
 let tri_comptage_t t1 =
     let m = maxi_t t1 in
