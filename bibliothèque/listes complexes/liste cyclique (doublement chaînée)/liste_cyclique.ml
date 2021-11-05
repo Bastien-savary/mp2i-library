@@ -10,6 +10,16 @@ let length l =
 let rec aux l1 =
   if l1 == l then 1 else 1 + aux l1.next in 
   aux l.next;;
+
+(* [print_l2c] renvoie les éléments de la liste l2c *)
+let print_l2c l =
+    let l_cur = ref l.next in 
+    while !l_cur != l do 
+        print_int !l_cur.elem; print_newline ();
+        l_cur := !l_cur.next
+        done;
+        print_int !l_cur.elem;
+        print_newline ();;
   
 (*[appartient e l] indique si l'élément e appartien à l*)
 let appartient e l =
