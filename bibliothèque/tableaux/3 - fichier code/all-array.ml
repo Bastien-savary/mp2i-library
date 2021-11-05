@@ -56,8 +56,8 @@ let doublon_t t1 =
     done;
     !result
 
-(* [inverser_l] renvoie l'inversion du tableaux t1*)
-let reverse_t t1 =
+(* [inverser_t] renvoie l'inversion du tableaux t1*)
+let inverser_t t1 =
     let n = ((Array.length t1)-1) in 
     for i = 0 to n/2 do
         let c = ref t1.(i) in 
@@ -68,7 +68,7 @@ let reverse_t t1 =
     t1;;
 
 (* [egal_t t1 t2] indique si les deux tableaux sont identiques*)
-let equal_t t1 t2 = 
+let egal_t t1 t2 = 
     let result = ref true in
     let m1 = Array.length t1 in
     let m2 = Array.length t2 in
@@ -140,6 +140,14 @@ let swap_t t1 i j =
   let tmp = t1.(i) in
   t1.(i) <- t1.(j);
   t1.(j) <- tmp;;
+  
+ (* [sort_bubble t] trie le tableau en compléxité (O(n**2)) *)
+let sort_bubble t = 
+  for _ = 0 to Array.length t - 1 do
+    for j = 0 to Array.length t - 2 do
+      if t.(j) > t.(j + 1) then swap t j (j + 1)
+      done
+  done;;
   
 (* [tri_t t] tri le tableau t1 en compléxité (O(n**2)) *)
 let tri_t t1 = 
