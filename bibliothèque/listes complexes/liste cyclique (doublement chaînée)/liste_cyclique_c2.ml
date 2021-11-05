@@ -33,11 +33,11 @@ let appartient e l =
 let add l e = 
     let l_new = {elem = e; prev = l; next = l.next} in 
       l.next.prev <- l_new ; 
-      l.next <- l_new;
+      l.next <- l_new;;
       
 let del l = 
     l.prev.next <- l.next;
-    l.next.prev <- l.prev
+    l.next.prev <- l.prev;;
     
 (*[fusion l1 l2]  réalise la fusion des deux listes en une*)
 let fusion l1 l2 = 
