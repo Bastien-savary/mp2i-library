@@ -28,7 +28,7 @@ let rec fusion_l l1 l2 = match l1, l2 with
     |e1::q1, e2::q2 -> if e1< e2 then e1::fusion_l q1 l2
                         else e2::fusion_l l1 q2;;
 
-* [tri_l l1] trie la liste l1, utilise split_l et fusion_l *)
+(* [tri_l l1] trie la liste l1, utilise split_l et fusion_l *)
 let rec tri_l l1 = match l1 with
     |[] -> []
     |[e] -> [e]
