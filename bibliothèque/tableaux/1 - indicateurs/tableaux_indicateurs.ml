@@ -78,7 +78,7 @@ let consecutive_max_t t1 =
     !m;;
 
 (* [dichotomie_t e t1] indique si e appartient à t1 en compléxité O(nlog(n))*)
-let dichotomie e t1 = 
+let dichotomie_t e t1 = 
     let rec aux i j =
         if i > j then false
         else let m = (i+j)/2 in
@@ -88,7 +88,7 @@ let dichotomie e t1 =
 aux 0 ((Array.length t1)-1);;
 
 (* [trichotomie_t e t1] indique si e appartient à t1 en compléxité O(nlog(n))*)
-let trichotomie e t1 =
+let trichotomie_t e t1 =
     let rec aux i j =
     if i > j then false
     else let m1 = (2*i + j + 1)/3 in
