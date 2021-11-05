@@ -57,7 +57,7 @@ let doublon_t t1 =
     !result
 
 (* [egal_t t1 t2] indique si les deux tableaux sont identiques*)
-let equal_t t1 t2 = 
+let egal_t t1 t2 = 
     let result = ref true in
     let m1 = Array.length t1 in
     let m2 = Array.length t2 in
